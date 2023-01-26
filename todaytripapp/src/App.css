@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Londrina+Shadow&family=Poor+Story&display=swap');
+
+.homeHeader{
+    height: 10vh;
+    background: #3E4958;
+    width: 100%;
+}
+
+.homeLogo{
+    position: relative;
+    margin-left: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.homeLogoImage{
+    scale: 0.75;
+}
+
+.homeBody{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.homeBodyFirstItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeBodySecondItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.homeBodySlogan{
+    font-family: 'Poor Story';
+    font-size: 2rem;
+}
+  
+.homeBodyName, .stepHeaderSlogan{
+    font-family: 'Londrina Shadow';
+    font-size: 6rem;
+}
+
+.homeBodySelector{
+    font-family: 'Londrina Shadow';
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 5vh;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+}
+
+.stepHeaderDescription, .countText, .checkText, .stepText, .budgetText{
+    font-family: 'Poor Story';
+    font-size: 1.5rem;
+}
+
+.checkedTrue, .checkedFalse{
+    font-family: 'Poor Story';
+    font-size: 1.25rem;
+}
+
+.stepHeaderItem{
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+}
+
+.stepBody{
+    height: 45vh;
+}
+
+#stepOne, #stepThree{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.countPersonFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5vh;
+}
+
+.countInnerFlex{
+    display: flex;
+    flex-direction: column;
+}
+
+.countFlex{
+    display: flex;
+    flex-direction: row;
+}
+
+.arrowFlex{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.checkPersonTypeFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+
+.checkPersonInnerFlex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.countFlex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vh;
+}
+
+.checkFlex{
+    display: flex;
+    flex-direction: row;
+    gap: 3vh;
+}
+
+.countImage, .arrowImage{
+    scale: 0.75;
+}
+
+.stepArrowImage{
+    scale: 0.5;
+}
+
+.checkedTrue, .checkedFalse{
+    border: 1px solid #0075FF;
+    border-radius: 10px;
+    width: 4rem;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stepFooter{
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.stepFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countBudgetInnerFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2vh;
+    align-items: center;
+}
+
+.budgetInputFlex{
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+    align-items: center;
+}
+
+.budgetRangeText{
+    font-family: 'Poor Story';
+    color: #0075FF;
+    font-size: 1.5rem;
+}
+
+.budgetInputBox{
+    border: 1px solid #0075FF;
+    border-radius: 10px;
+    width: 4rem;
+    height: 5vh;
+    text-align: center;
+    font-size: 1.25rem;
+    font-family: 'Poor Story';
+}
