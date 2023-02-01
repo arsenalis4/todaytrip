@@ -14,12 +14,17 @@ async function RoomScraping(url) {
     var hotelInfo = {};
     var roomInfo = [];
     var hotelName = $("#content > div.top > div.right > div.info > h2").text();
+    var hotelAddress = $(".address").text();
     hotelInfo["hotelName"] = hotelName;
+    hotelInfo["address"] = hotelAddress;
+    hotelInfo["moreInfo"] = url;
     var roomNameData = $(".room > .title");
     var roomPriceData = $("div.room > div.info > div > div > div > p:nth-child(2)");
+    var roomImageData = $(".room > .pic_view > img");
     var roomLength = roomNameData.length; 
     for (var i = 0; i < roomLength; i++){
       var singleRoomInfo = {};
+      singleRoomInfo["thumbnail"] = roomImageData[i].attribs["data-original"];
       singleRoomInfo["roomName"] = roomNameData[i].children[0].data;
       
       try{
@@ -50,7 +55,6 @@ function getRoom(url){
 }
 
 function getResult(url){
-  console.log(url);
   return getRoom(url).then((res)=> {
     //console.log(res);
     return res;

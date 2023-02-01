@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Londrina+Shadow&family=Poor+Story&display=swap');
 
+a{
+    text-decoration: none;
+}
+
 .homeHeader{
     height: 10vh;
     background: #3E4958;
@@ -38,6 +42,7 @@
     justify-content: center;
     align-items: center;
     gap: 2vh;
+    cursor: pointer;
 }
 
 .homeBodySlogan{
@@ -68,9 +73,14 @@
     font-size: 1.5rem;
 }
 
-.checkedTrue, .checkedFalse{
+.checkedTrue, .checkedFalse, .searchLocation, .searchLocationText, .aroundLocation{
     font-family: 'Poor Story';
     font-size: 1.25rem;
+}
+
+.checkedTrue, .checkedFalse{
+    color: "#2772B7";
+    cursor: pointer;
 }
 
 .stepHeaderItem{
@@ -147,6 +157,10 @@
     scale: 0.75;
 }
 
+.arrowImage{
+    cursor: pointer;
+}
+
 .stepArrowImage{
     scale: 0.5;
 }
@@ -173,6 +187,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
 
 .countBudgetInnerFlex{
@@ -204,4 +219,294 @@
     text-align: center;
     font-size: 1.25rem;
     font-family: 'Poor Story';
+}
+
+#stepZero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+}
+
+.searchLocation{
+    width: 15rem;
+    height: 5vh;
+    border: 1px solid #0075FF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #979393;
+    background-image: url('/public/img/search-interface-symbol 1.svg');
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+    background-size: 10%;
+    cursor: pointer;
+}
+
+.aroundLocation{
+    width: 15rem;
+    height: 5vh;
+    background: #2772B7;
+    border: 1px solid #0075FF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.setLocationHeader{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'Poor Story';
+    background-image: url('/public/img/ion_fitness (3).svg');
+    background-size: 10%;
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+}
+
+.setLocationBody{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    border-top: 1px solid #D9D9D9;
+}
+
+.mainLocationBody{
+    height: 100%;
+    width: 35%;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subLocationBody{
+    height: 100%;
+    width: 65%;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainLocation{
+    background: rgb(217, 217, 217, 0.5);
+    border-bottom: 1px solid #d9d9d9;
+    width: 100%;
+    height: 7.5vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Poor Story';
+    cursor: pointer;
+}
+
+.mainLocationName{
+    margin-left: 5%;
+}
+
+.subLocation{
+    border-bottom: 1px solid #d9d9d9;
+    height: 7.5vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    font-family: 'Poor Story';
+    cursor: pointer;
+}
+
+.searchCalendar{
+    width: 15rem;
+    height: 5vh;
+    border: 1px solid #0075FF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #979393;
+    background-image: url('/public/img/calendar 1.svg');
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+    background-size: 10%;
+    font-family: 'Poor Story';
+    cursor: pointer;
+}
+
+#stepTwo{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendarDisplay{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filterBox{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 30px;
+    border: 0.5px solid #3E4958;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listBody{
+    height: 80vh;
+}
+
+.listBodyHeader{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+  
+.listHotelHeader{
+    position: relative;
+    margin-left: 5%;
+    font-size: 1.5rem;
+    font-family: 'ABeeZee';
+}
+  
+.listHotelHeaderText{
+    font-style: italic;
+}
+
+.filterFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.filterBoxFlex{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.hotelList > div:nth-child(1){
+    margin-top: 1vh;
+}
+  
+.hotelList > div:nth-last-child(1){
+    margin-bottom: 1vh;
+}
+
+.hotelList{
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    gap: 1rem;
+    height: 70vh;
+}
+
+.hotelBox{
+    position: relative;
+    width: 90%;
+    left: 5%;
+    min-height: 12.5vh;
+    max-height: 12.5vh;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vh;
+}
+
+.hotelImage{
+    padding-left: 2vh;
+}
+  
+.hotelImage > img{
+    border-radius: 20px;
+}
+  
+.hotelImage, .hotelImage > img{
+    height: 8vh;
+    width: 8vh;
+}
+
+.hotelInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.roomInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    width: 65%;
+}
+
+.moreInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+}
+
+.roomName, .roomPrice{
+    font-family: 'ABeeZee';
+    font-size: 1rem;
+    color: #3E4958;
+}
+
+.roomPrice{
+    font-family: 'ABeeZee';
+    font-size: 1rem;
+}
+
+.hotelName, .hotelDistance{
+    font-family: 'ABeeZee';
+    font-size: 0.75rem;
+    color: #3E4958;
+}
+
+.hotelDistance{
+    opacity: 0.6;
+}
+
+.moreLink{
+    background: #2772B7;
+    border: 1px solid #0075FF;
+    border-radius: 10px;
+    width: 80%;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moreLink > a{
+    font-size: 0.75rem;
+    color: white;
+    font-family: 'ABeeZee';
+}
+
+@media (min-width: 480px) {
+    .hotelInfo{
+        justify-content: space-around;
+    }
 }
