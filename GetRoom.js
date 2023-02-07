@@ -15,8 +15,12 @@ async function RoomScraping(url) {
     var roomInfo = [];
     var hotelName = $("#content > div.top > div.right > div.info > h2").text();
     var hotelAddress = $(".address").text();
+    var hotelRating = $(".score_cnt > span").text();
+    var hotelRanking = $(".build_badge").text();
     hotelInfo["hotelName"] = hotelName;
     hotelInfo["address"] = hotelAddress;
+    hotelInfo["hotelRating"] = hotelRating;
+    hotelInfo["hotelRanking"] = hotelRanking;
     hotelInfo["moreInfo"] = url;
     var roomNameData = $(".room > .title");
     var roomPriceData = $("div.room > div.info > div > div > div > p:nth-child(2)");

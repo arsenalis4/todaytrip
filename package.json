@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react-calendar": "^4.0.0"
+    "react-calendar": "^4.0.0",
+    "react-router-dom": "^6.8.0"
   }
 }

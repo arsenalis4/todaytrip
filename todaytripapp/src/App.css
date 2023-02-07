@@ -2,6 +2,7 @@
 
 a{
     text-decoration: none;
+    color: black;
 }
 
 .homeHeader{
@@ -68,6 +69,10 @@ a{
     border-radius: 100px;
 }
 
+#pensionSelector, #motelSelector{
+    opacity: 0.5;
+}
+
 .stepHeaderDescription, .countText, .checkText, .stepText, .budgetText{
     font-family: 'Poor Story';
     font-size: 1.5rem;
@@ -78,8 +83,12 @@ a{
     font-size: 1.25rem;
 }
 
+.searchLocationText{
+    display: none;
+}
+
 .checkedTrue, .checkedFalse{
-    color: "#2772B7";
+    color: #2772B7;
     cursor: pointer;
 }
 
@@ -225,7 +234,8 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /*justify-content: center;*/
+    justify-content: flex-start;
     gap: 5vh;
 }
 
@@ -252,7 +262,8 @@ a{
     background: #2772B7;
     border: 1px solid #0075FF;
     border-radius: 10px;
-    display: flex;
+    /*display: flex;*/
+    display: none;
     align-items: center;
     justify-content: center;
     color: white;
@@ -260,17 +271,26 @@ a{
 }
 
 .setLocationHeader{
+    display: flex;
     height: 10vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+}
+
+.setLocationHeader > .image{
+    height: 100%;
+    left: 5%;
+    position: relative;
+    width: 0;
+    display: flex;
+    scale: 0.5;
+}
+
+.setLocationHeader > .text{
     font-family: 'Poor Story';
-    background-image: url('/public/img/ion_fitness (3).svg');
-    background-size: 10%;
-    background-position: 5% 50%;
-    background-repeat: no-repeat;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
 }
 
 .setLocationBody{
@@ -341,6 +361,16 @@ a{
     cursor: pointer;
 }
 
+.clickCalendar{
+    margin-top: 1rem;
+    font-family: 'Poor Story';
+    width: 30%;
+    border: none;
+    background-color: #2772B7;
+    height: 4vh;
+    color: white;
+}
+
 #stepTwo{
     display: flex;
     justify-content: space-between;
@@ -362,6 +392,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .listBody{
@@ -400,6 +431,10 @@ a{
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
+}
+
+.filterIcon{
+    cursor: pointer;
 }
 
 .hotelList > div:nth-child(1){
@@ -497,12 +532,124 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.moreLink > a{
     font-size: 0.75rem;
     color: white;
     font-family: 'ABeeZee';
+    cursor: pointer;
+}
+
+.starImage{
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+}
+
+.starImage > img{
+    width: 1rem;
+    height: 1rem;
+}
+
+.hotelRating{
+    position: absolute;
+    left: 4.25vh;
+    font-family: 'ABeeZee';
+}
+
+.ratingFlex{
+    display: flex;
+    flex-direction: row;
+}
+
+.filterActivityIndicator, .activityIndicator{
+    height: 3rem;
+    position: fixed;
+    top: 50%;
+    display: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.activityIndicator > img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.recommendationFooter{
+    position: relative;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goHomeButton{
+    width: 50%;
+    height: 5vh;
+    background: #2772B7;
+    border: 1px solid #0075FF;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-family: 'Poor Story';
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filterHeader{
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+.filterOut{
+    position: relative;
+    left: 5%;
+    width: 0;
+    height: 100%;
+}
+
+.filterOutIcon{
+    scale: 0.75;
+    cursor: pointer;
+}
+
+.filterText{
+    position: relative;
+    margin-left: 5%;
+    font-size: 1.25rem;
+}
+
+.filterBody{
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.amenities{
+    display: flex;
+    flex-direction: column;
+}
+
+.filterFacilityText{
+    font-size: 1.25rem;
+    text-align: center;
+    width: 100%;
+}
+
+.filterGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem;
+    row-gap: 0.5rem;
+}
+
+.checkmarkFlex{
+    display: flex;
+    gap: 0.5rem;
 }
 
 @media (min-width: 480px) {
